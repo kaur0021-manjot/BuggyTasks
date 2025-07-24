@@ -8,7 +8,10 @@ public partial class DeviceInfoPage : ContentPage
     public DeviceInfoPage()
     {
         InitializeComponent();
-        var model = DeviceInfo.Model;
-        var platform = DeviceInfo.Platform.ToString();
+
+        // Set the labels defined in XAML
+        ModelLabel.Text = $"Model: {DeviceInfo.Model}";
+        PlatformLabel.Text = $"Platform: {DeviceInfo.Platform}";
     }
 }
+

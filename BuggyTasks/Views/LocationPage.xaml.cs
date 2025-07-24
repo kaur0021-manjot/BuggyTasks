@@ -10,18 +10,25 @@ public partial class LocationPage : ContentPage
         InitializeComponent();
     }
 
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
-        GetLocation(); 
+        await GetLocation();
     }
 
-    Task GetLocation()
+    async Task GetLocation()
     {
-        var location =  Geolocation.GetLastKnownLocationAsync(); 
+        var location = await Geolocation.GetLastKnownLocationAsync();
+
         if (location != null)
         {
-            Console.WriteLine($"Lat: {location.Latitude}, Long: {location.Longitude}");
+            LatitudeLabel.Text = $"Latitude: {location.Latitude}";
+            LongitudeLabel.Text = $"Longitude: {location.Longitude}";
+        }
+        else
+        {
+            LatitudeLabel.Text = "Latitude: Not available";
+            LongitudeLabel.Text = "Longitude: Not available";
         }
     }
 }

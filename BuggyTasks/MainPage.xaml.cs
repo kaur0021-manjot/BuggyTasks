@@ -18,5 +18,17 @@ public partial class MainPage : ContentPage
     {
         await Shell.Current.GoToAsync("NewTaskPage");
     }
+
     
+    async void OnGetLocation(object sender, EventArgs e)
+    {
+        
+        await Shell.Current.GoToAsync("locationpage");
+    }
+
+    async void OnDeviceInfo(object sender, EventArgs e)
+    {
+       
+        await Shell.Current.GoToAsync("deviceinfopage");
+    }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuggyTasks.Views.LocationPage"
+             Title="Location Page">
+
+    <StackLayout Padding="20" Spacing="10">
+        <Label Text="Location Page" FontSize="24" HorizontalOptions="Center" />
+        <Label x:Name="LatitudeLabel" Text="Latitude: --" FontSize="18" />
+        <Label x:Name="LongitudeLabel" Text="Longitude: --" FontSize="18" />
+    </StackLayout>
+
+</ContentPage>
